@@ -1,0 +1,44 @@
+GIT dictionary
+
+REPOSITORY:
+$ git init                                  → initialize an empty repository
+$ git remote -v                             → show remote repository indicated
+$ git remote rm origin                      → remove indicated remote repository
+$ git remote add origin "repository_adress" → indicate a remote repository
+$ git clone "repository_address"            → clone remote repository
+$ git config --global user.name "name"      → add an author name to the repository
+$ git config --global user.name             → show author name in repository
+$ git rm -R "name_folder"
+
+MANAGE FILES:
+$ git status                                → show all changed files on branch
+$ git diff                                  → show exactly changes to files on branch
+
+ADD:
+$ git add "filename.ext"                    → adds a file to be tracked by GIT
+$ git add -A                                → adds ALL files to be tracked by GIT
+
+COMMIT:
+$ git commit -m "commit_name"               → close changes accompanied by a name
+$ git reset --hard "code_commit"            → reset on past commits (roll back repository)
+
+BRANCH:
+$ git log                                   → show branch history
+$ git branch                                → show all existing branchs in the local repository
+$ git branch -a                             → show all branchs in the remote repository
+$ git branch <new_branch>                   → create a new branch
+$ git checkout "brach_name"                 → select a branch to work
+
+PULL:
+$ git pull origin <branch>                  → update local repository with files from remote repository
+
+PUSH:
+$ git push origin master                    → send the local branch to the remote repository
+
+MERGE:
+$ git merge "branch_name"                   → join branch with the master
+
+LOCAL AND REMOTE CONNECTION:
+$ ssh-keygen -t ed25519 -C "email_adress"   → generates SSH key to access the remote repository
+$ git remote set-url origin git@github.com:USERNAME/REPONAME.git    →   change the remote repository URL
+                                                                        (required for authentication)
