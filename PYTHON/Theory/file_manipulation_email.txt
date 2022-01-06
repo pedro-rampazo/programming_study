@@ -1,0 +1,52 @@
+client → internet → server
+
+HOSTS ou ENDPOINTS:
+- Todos os computadores que estão conectados a uma rede e participam diariamente da comunicação em rede são classificados
+como HOSTS. Os HOSTS podem ser chamados de ENDPOINTS (dispositivos finais).
+
+SERVIDORES:
+- SERVIDORES são computadores com software que lhes permite fornecer informações, como e-mail ou páginas da Web, para
+outros dispositivos finas na rede
+
+- Cada serviço exige um software de servidor separado. Por exemplo, um computador exige um software de Servidor Web,
+para que possa prover serviços web à rede. Um computador com software de servidor pode fornecer serviços simultaneamente
+a muitos clientes diferentes
+
+CLIENTES:
+- Um exemplo de software cliente é um navegador como o Chrome. Um único computador pode também executar vários tipos de
+software cliente. Por exemplo, um usuário pode verificar o e-mail e vizualizar uma página Web enquanto troca mensagens
+instantâneas e ouve um fluxo de áudio
+
+PROTOCOLOS:
+- Para que os dispositivos finais possam se comunicar através de uma rede, cada dispositivo deve cumprir o mesmo conjunto
+de regras. Essas regras são chamadas de PROTOCOLOS e eles têm muitas funções em uma rede.
+
+PROTOCOLOS DE EMAIL:
+- O e-mail é um método de armazenar, encaminhar, enviar e de recuperar mensagens eletrônicas em uma rede. Mensagens
+de e-mail são armazenadas nos bancos de dados em servidores de e-mail.
+
+- O e-mail suporta 3 protocolos separados para a operação: SMTP, POP e IMAP. O processo que envia um e-mail usa o SMTP.
+Um cliente recupera e-mails usando um dos dois protocolos da camada de aplicação: POP e IMAP
+
+-------------------------
+
+How to send a email by terminal:
+$ python
+$ import smtplib
+$ connection = smtplib.SMTP('domain_name', 587)
+$ type(connection)
+$ connection
+$ connection.ehlo() → indicate a test of connection between computer and server
+$ connection.starttls() → active TLS protocol 
+$ connection.login('email', 'password')
+$ connection.sendmail('my_email', 'email_sended', 'Subject: head of the email\n\Message\n\nUser')
+$ connection.quit()
+
+- Acesse https://accounts.google.com/DisplayUnlockCaptcha
+
+SMTP SERVER DOMAIN NAME:
+Gmail               → smtp.gmail.com
+Outlook/Hotmail     → smtp-mail.outlook.com
+Yahoo mail          → smtp.mail.yahoo.com
+
+PORTA: 587
