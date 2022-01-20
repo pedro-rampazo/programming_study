@@ -1,0 +1,42 @@
+mysql> create database `store`;
+
+mysql>  create table `products` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, 
+        `amount` INT NOT NULL, `price` FLOAT NOT NULL, `id_categories` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql>  create table `categories` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, PRIMARY KEY (`id`))
+        ENGINE=InnoDB;
+
+mysql> insert into `products` values (null, "Lampshade", 100, 800, 4);
+
+mysql> insert into `products` values (null, "Table for painting", 1000, 560, 9);
+
+mysql> insert into `products` values (null, "Notebook Desk", 10000, 25.50, 9);
+
+mysql> insert into `products` values (null, "Computer Desk", 350, 320.50, 6);
+
+mysql> insert into `products` values (null, "Chair", 3000, 210.64, 9);
+
+mysql> insert into `products` values (null, "Home alarm", 750, 460, 4);
+
+mysql> insert into `categories` values (null, "old stock");
+
+mysql> insert into `categories` values (null, "new stock");
+
+mysql> insert into `categories` values (null, "modern");
+
+mysql> insert into `categories` values (null, "commercial");
+
+mysql> insert into `categories` values (null, "recyclable");
+
+mysql> insert into `categories` values (null, "executive");
+
+mysql> insert into `categories` values (null, "superior");
+
+mysql> insert into `categories` values (null, "wood");
+
+mysql> insert into `categories` values (null, "super luxury");
+
+mysql> insert into `categories` values (null, "vintage");
+
+mysql>  select products.id, products.name from products inner join categories on 
+        products.id_categories = categories.id where categories.name like 'super%';

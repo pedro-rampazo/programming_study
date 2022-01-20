@@ -1,0 +1,30 @@
+mysql> create database `movie_rental`;
+
+mysql>  create table `movies` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL,
+        `id_prices` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql>  create table `prices` (`id` INT NOT NULL AUTO_INCREMENT, `categorie` VARCHAR(100) NOT NULL,
+        `value` FLOAT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql> insert into `movies` values (null, "Batman", 3);
+
+mysql> insert into `movies` values (null, "The Battle Of The Dark River", 3);
+
+mysql> insert into `movies` values (null, "White Duck", 5);
+
+mysql> insert into `movies` values (null, "Breaking Barriers", 4);
+
+mysql> insert into `movies` values (null, "The Two Hours", 2);
+
+mysql> insert into `prices` values (null, "Releases", 3.50);
+
+mysql> insert into `prices` values (null, "Bronze Seal", 2.00);
+
+mysql> insert into `prices` values (null, "Silver Seal", 2.50);
+
+mysql> insert into `prices` values (null, "Gold Seal", 3.00);
+
+mysql> insert into `prices` values (null, "Promotion", 1.50);
+
+mysql>  select movies.id, movies.name from movies inner join prices on movies.id_prices = prices.id 
+        where prices.value < 2.00;

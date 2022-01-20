@@ -1,3 +1,9 @@
+"""
+Visibility - Access Modifier
+→ Private (Restrictive) - Attributes and Methods can only be manipulated within the Class
+→ Protected (Intermidiate) - Attributes and Methods can only be manipulated within Class and Subclass
+→ Public (Les restrictive) - Attributes and Methods can be manipulated in anywhere in the code 
+"""
 class AccountBank:
     
     # Class Attribute → For fix attributes
@@ -14,21 +20,22 @@ class AccountBank:
 
     # Instance Attribute
     def __init__(self, account_number, titular, balance = 2000): # Balance with a default value
-        self.account_number = account_number
-        self.titular = titular
-        self.balance = balance
-    
+        self._account_number = account_number # Protected Visibility
+        self.titular = titular # Public Visibility
+        self.__balance = balance # Private Visibility
+        
     
     def extract(self):
-        self.balance -= AccountBank.tax # Clear reference to class
-        print(f"Your extract: {self.balance}")
+        self.__balance -= AccountBank.tax # Clear reference to class
+        print(f"Your extract: {self.__balance}")
     
     
     def deposit(self, amount):
-        self.balance += amount
+        self.__balance += amount
+    
     
     def withdraw_money(self, value):
-        self.balance -= value
+        self.__balance -= value
 
 account_one = AccountBank(12345, "Pedro Rampazo")
 account_two = AccountBank(54321, "João da Silva", 5000)
