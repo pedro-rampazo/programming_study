@@ -104,3 +104,7 @@ mysql> delete from `<table>` where <column> = '<value>' and <column> = <value>;
 
 mysql> drop database <database>
 {delete database}
+
+#OTHER SITUATIONS:#
+
+mysql> select CAST(AVG(<column_name>) AS DECIMAL(10,<number_decimal_places>)) from `<table>`;
