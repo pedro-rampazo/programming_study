@@ -1,0 +1,17 @@
+mysql> create table customer_street;
+
+mysql>  create table `customers` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL,
+        `street` VARCHAR(100) NOT NULL, `city` VARCHAR(100) NOT NULL, `state` CHAR(2) NOT NULL,
+        `credit_limit` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql> insert into `customers` values (null, "João da Silva", "Av. Amador Bueno", "São Paulo", "SP", 1500);
+
+mysql> insert into `customers` values (null, "Ricardo Marcos de Oliveira", "Rua Três Coroas", "Porto Alegre", "RS", 3000);
+
+mysql> insert into `customers` values (null, "Regina Yamazaki", "Rua Ferro Velho", "Porto Alegre", "RS", 800);
+
+mysql> insert into `customers` values (null, "Maurício Rogério", "Rua Laranjeiras", "Belo Horizonte", "MG", 6000);
+
+mysql> insert into `customers` values (null, "Carolina de Oliveira", "Rua Mil Colônias", "Porto Alegre", "RS", 2750);
+
+mysql> select customers.name, customers.street from customers where city = "Porto Alegre";

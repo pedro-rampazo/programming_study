@@ -1,0 +1,20 @@
+mysql> create database `store`;
+
+mysql>  create table `products` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, 
+        `amount` INT NOT NULL, `price` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql> insert into `products` values (null, "Micro-Ondas", 50, 700);
+
+mysql> insert into `products` values (null, "Home-Theater", 80, 1560);
+
+mysql> insert into `products` values (null, "Borracha", 150, 7);
+
+mysql> insert into `products` values (null, "Camiseta", 100, 30);
+
+mysql> insert into `products` values (null, "Calça", 22, 80);
+
+mysql> insert into `products` values (null, "Caneta", 300, 3);
+
+mysql> select * from `products` where price <= 10 or price >= 100;
+
+mysql> select products.id, products.name from products where price <= 10 or price >= 100;
