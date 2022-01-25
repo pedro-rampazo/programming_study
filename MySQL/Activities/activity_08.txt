@@ -1,0 +1,35 @@
+mysql> create database movie_rental;
+
+mysql>  create table `customers` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, 
+        `street` VARCHAR(150) NOT NULL, `city` VARCHAR(100) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql>  create table `rentals` (`id` INT NOT NULL AUTO_INCREMENT, `rentals_date` DATE NOT NULL, 
+        `id_customers` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql> insert into `customers` values (null, "Giovanna Gonçalves Oliveira", "Rua Mato Grosso", "Canoas");
+
+mysql> insert into `customers` values (null, "Kauã Azevedo Ribeiro", "Travessa Ibiá", "Uberlândia");
+
+mysql> insert into `customers` values (null, "Rebeca Barbosa Santos", "Rua Observatório Meteorológico", "Salvador");
+
+mysql> insert into `customers` values (null, "Sarah Carvalho Correia", "Rua Antônio Carlos da Silva", "Apucarana");
+
+mysql> insert into `customers` values (null, "João Almeida Lima", "Rua Rio Taiuva", "Ponta Grossa");
+
+mysql> insert into `customers` values (null, "Diogo Melo Dias", "Rua Duzentos e Cinquenta", "Várzea Grande");
+
+mysql> insert into `rentals` values (null, 20160910, 3);
+
+mysql> insert into `rentals` values (null, 20160209, 1);
+
+mysql> insert into `rentals` values (null, 20160208, 4);
+
+mysql> insert into `rentals` values (null, 20160209, 2);
+
+mysql> insert into `rentals` values (null, 20160203, 6);
+
+mysql> insert into `rentals` values (null, 20160404, 4);
+
+mysql>  select customers.name, rentals.rentals_date from customers inner join rentals on 
+        rentals.id_customers = customers.id where month(rentals_date) = 09;
+
