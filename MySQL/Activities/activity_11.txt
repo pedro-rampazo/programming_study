@@ -1,0 +1,16 @@
+mysql> create database lawyers_enterprise;
+
+mysql>  create table `lawyers` (`register` INT NOT NULL, `name` VARCHAR(100) NOT NULL, 
+        `customers_number` INT NOT NULL, PRIMARY KEY (`register`)) ENGINE=InnoDB;
+
+mysql> insert into `lawyers` values (1648, "Marty M. Harrison", 5);
+
+mysql> insert into `lawyers` values (2427, "Jonathan J. Blevis", 15);
+
+mysql> insert into `lawyers` values (3365, "Chelsey D. Sanders", 20);
+
+mysql> insert into `lawyers` values (4153, "Dorothy W. Ford", 16);
+
+mysql> insert into `lawyers` values (5525, "Penny J. Cormier", 6);
+
+mysql> select max(customers_number), min(customers_number), avg(customers_number) from lawyers;

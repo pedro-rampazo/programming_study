@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            var number_one = prompt("Primeiro Número:");
+            var sign = prompt("Operação Matemática:");
+            
+            while(sign != "-" && sign != "+" && sign != "*" && sign != "/"){
+                alert("Por favor, insira um sinal válido!");
+                var sign = prompt("Operação Matemática:");
+            }
+            
+            var number_two = prompt("Segundo Número:");
+
+            number_one = parseInt(number_one);
+            number_two = parseInt(number_two);
+
+            var result = 0;
+            if(sign == "+"){
+                result = number_one + number_two;
+            }else if(sign == "-"){
+                result = number_one - number_two;
+            }else if(sign == "*"){
+                result = number_one * number_two;
+            }else if(sign == "/"){
+                result = number_one / number_two;
+            }
+
+            alert("O resultado final é: "+result);
+
+        </script>
+    </body>
+</html>
