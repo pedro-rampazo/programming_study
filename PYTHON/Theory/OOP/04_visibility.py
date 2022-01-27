@@ -25,5 +25,5 @@ class AccountBank:
     def withdraw(self, value):
         self.__balance -= value
 
-account_one = AccountBank(345, "Pedro Rampazo", 5000)
+account_one = AccountBank(345, "Pedro", 5000)
 account_one.extract() # The only way to view balance

@@ -14,10 +14,10 @@ class Patient:
         age = date.today().year - birthYear
         return cls(name, age, cpf, email)
 
-patient = Patient("Pedro Rampazo", 21, "000.000.000-00", "pedro.rampazo@hotmail.com")
+patient = Patient("Pedro", 21, "000.000.000-00", "name.lastname@hotmail.com")
 print(patient.__dict__)
 print(Patient.ageBirthYear(2000))
 
-patient = Patient.ageBirthYear("Pedro Rampazo", 2000, "000.000.000-00", "pedro.rampazo@hotmail.com")
+patient = Patient.ageBirthYear("Pedro", 2000, "000.000.000-00", "name.lastname@hotmail.com")
 print(patient.__dict__)
 print(patient.age)
