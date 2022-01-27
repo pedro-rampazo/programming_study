@@ -31,7 +31,7 @@ class Student:
 
 
 
-student_one = Student("Pedro Rampazo", 15, 123456)
+student_one = Student("Pedro", 15, 123456)
 
 # Calling Getters like attributes
 print(student_one.name)

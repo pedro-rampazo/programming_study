@@ -4,7 +4,7 @@ mysql>  create table `providers` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCH
         `street` VARCHAR(100) NOT NULL, `city` VARCHAR(100) NOT NULL, 
         `state` CHAR(2) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
 
-mysql> insert into `providers` values (null, "Pedro Rampazo", "Rua Nova Friburgo", "São Paulo", "SP");
+mysql> insert into `providers` values (null, "João Gonçalves", "Rua Pistache", "São Paulo", "SP");
 
 mysql> insert into `providers` values (null, "Robert Augusto", "Rua das Coméias", "Belo Horizonte", "MG");
 

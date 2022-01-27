@@ -43,6 +43,6 @@ print(f"Bank tax: {AccountBank.tax}")
 # Calling Class Method
 AccountBank.returnCode()
 AccountBank.returnBankCode()
-account_one = AccountBank(123, "Pedro Rampazo", 3500)
+account_one = AccountBank(123, "Pedro", 3500)
 # Calling Object Method
 account_one.extract()

@@ -25,7 +25,7 @@ class AccountBank:
         self.balance -= value
 
 # Instantiating the object
-account_one = AccountBank(123, "Pedro Rampazo", 10000)
+account_one = AccountBank(123, "Pedro", 10000)
 
 # Calling attributes of the object
 print(f"Account Number: {account_one.account_number}")
