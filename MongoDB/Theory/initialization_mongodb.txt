@@ -1,0 +1,42 @@
+MongoDB Status:
+$ sudo systemctl status mongod
+
+Start MongoDB:
+$ sudo systemctl start mongod
+
+Stop MongoDB:
+$ sudo systemctl stop mongod
+
+Using MongoDB:
+$ mongosh
+
+------------------------------------------------
+Databases > Collection (Tables in SQL)
+
+#VIEWING MongoDB:#
+
+{Show not empty databases}
+mongodb> show databases
+
+{Switch or create a new database}
+mongodb> use <database_name>
+
+{Create a collection}
+mongodb> db.createCollection('<collection_name>')
+
+{Show collections}
+mongodb> show collections
+
+{Insert values}
+mongodb> db.<collection_name>.insertOne({<key>: '<value>', <key>: '<value>'})
+mongodb> deb.<collection_name>.insertMany({<key>: '<value>', <key>: '<value>'})
+
+{Viewing values}
+mongodb> db.<collection_name>.find({})
+
+{Delete values}
+mongodb> db.<collection_name>.deleteOne({<key>: '<value>'})
+mongodb> db.<collection_name>.deleteMany({<key>: '<value>', <key>: '<value>'})
+
+
+

@@ -1,0 +1,33 @@
+mysql> create table products_by_category;
+
+mysql>  create table `products` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, 
+        `amount` INT NOT NULL, `price` FLOAT NOT NULL, `id_categories` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+mysql>  create table `categories` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(100) NOT NULL, PRIMARY KEY (`id`)) 
+        ENGINE=InnoDB;
+
+mysql> insert into `products` values (null, "Two-door wardrobe", 100, 800, 1);
+
+mysql> insert into `products` values (null, "Dining table", 1000, 560, 3);
+
+mysql> insert into `products` values (null, "Tower holder", 10000, 25.50, 4);
+
+mysql> insert into `products` values (null, "Computer desk", 350, 320.50, 2);
+
+mysql> insert into `products` values (null, "Chair", 3000, 210.64, 4);
+
+mysql> insert into `products` values (null, "Single bed", 750, 460, 1);
+
+mysql> insert into `categories` values (null, "Wood");
+
+mysql> insert into `categories` values (null, "Luxury");
+
+mysql> insert into `categories` values (null, "Vintage");
+
+mysql> insert into `categories` values (null, "Modern");
+
+mysql> insert into `categories` values (null, "Super Luxury");
+
+mysql>  select categories.name, sum(products.amount) from products inner join categories on 
+        products.id_categories = categories.id group by products.id_categories;
+

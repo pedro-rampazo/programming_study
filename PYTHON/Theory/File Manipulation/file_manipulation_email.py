@@ -10,9 +10,9 @@ com a inclusão do utf-8
 
 - Pedro
 """
-msg['From'] = 'pedro.rampazo@hotmail.com'
-msg['To'] = 'pedro.rampazo66@gmail.com'
-password = 'mercyfulking666'
+msg['From'] = '<from_email>'
+msg['To'] = '<to_email>'
+password = '<password>'
 msg.add_header('Content Type', 'text/html')
 msg.set_payload(body)
 body = """

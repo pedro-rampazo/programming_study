@@ -1,0 +1,110 @@
+MySQL installation:
+
+wget installation:
+$ apt-get install wget
+
+$ wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+
+$ md5sum mysql57-community-release-el7-9.noarch.rpm
+
+rpm Installation:
+$ sudo apt install rpm
+
+$ sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+
+Install MySQL Server by typing:
+$ sudo apt-get install mysql-server
+
+$ sudo grep 'temporary password' /var/log/mysqld.log
+
+Secure MySQL server installation:
+$ sudo /usr/bin/mysql_secure_installation
+
+MySQL testing:
+
+$ systemctl status mysql → show MySQL status
+$ sudo systemctl start mysql → start MySQL
+$ sudo systemctl stop mysql → stop MySQL
+$ mysql -u root -p
+
+------------------------------------------
+DATABASE → TABLE → ROWS
+
+#VIEWING DATABASES#
+
+mysql> show databases;
+{view database}
+
+mysql> use <database>;
+{change my working database}
+
+mysql> show tables;
+{view tables}
+
+mysql> show columns from `<table>`;
+{show table columns}
+
+mysql> select * from `<table>`;
+{show table rows}
+
+mysql> select * from `<table>` order by `<column>` desc;
+{sort in descending order}
+
+mysql> select * from `<table>` order by `<column>` asc;
+{sort in ascending order}
+
+mysql> select * from `<table>` group by `<column>`;
+{group by column values}
+
+mysql> select * from `<table>` limit 5;
+{show limited rows}
+
+mysql> select * from `<table>` limit 2, 3;
+{show limited rows between a range}
+
+mysql> select * from `<table>` where <column> = '<value>' and <column> > '<value>';
+{view rows with operator AND}
+
+mysql> select * from `<table>` where <column> = '<value>' or <column> > '<value>';
+{view rows with operator OR}
+
+mysql> select * from `<table>` where (<column> = '<value>' or <column> = '<value>') and <column> = '<value>';
+{view rows with operators AND, OR}
+
+mysql> select * from `<table>` where <column> like '%<some_value>%';
+{view rows with a value piece}
+
+mysql> select <table1>.<column>, <table2>.<column> from <table1> inner join <table2> on <table1>.id = <table2>.id
+{INNER JOIN; intersection between two tables}
+
+mysql> select * from `<table1>` left join `<table2>` on <table1>.id = <table2>.id;
+{LEFT JOIN; when <table1> has no records in <table2>}
+
+mysql> select * from `<table1>` right join `<table2>` on <table1>.id = <table2>.id;
+{RIGHT JOIN; when <table2> has no records in <table1>}
+
+#MANIPULATING DATABASES#
+
+mysql> create database <database>;
+{create a new database}
+
+mysql> create table `<table>` (`id` INT NOT NULL AUTO_INCREMENT, `<column>` <DATA TYPE> <NULL>,
+        `<column>` <DATA TYPE> <NULL>, `<column>` <DATA TYPE> <NULL>, PRIMARY KEY (`id`))
+        ENGINE=InnoDB;
+{create table with columns}
+
+mysql> insert into `<table>` VALUES (null, "<content>", "<content>", <content>);
+{Insert a row in the table}
+
+mysql> update `<table>` set <column> = '<value>' where id = 1;
+{update values in the table}
+
+mysql> delete from `<table>` where <column> = '<value>' and <column> = <value>;
+{delete values in the table}
+
+mysql> drop database <database>
+{delete database}
+
+#OTHER SITUATIONS:#
+
+mysql> select CAST(AVG(<column_name>) AS DECIMAL(10,<number_decimal_places>)) from `<table>`;
