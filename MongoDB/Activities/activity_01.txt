@@ -1,0 +1,43 @@
+mongodb> db.createDatabase("Pokedex")
+
+mongodb> use Pokedex
+
+mongodb> db.createCollection("Pokemon", {autoIndexId: false})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 009, "name": "Blastoise", "type": "Water", "weakness": ["Grass", "Electric"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 004, "name": "Charmander", "type": "Fire", 
+            "weakness": ["Water", "Ground", "Rock"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 002, "name": "Ivysaur", "type": ["Grass", "Poison"],
+            "weakness": ["Fire", "Psychic", "Flying", "Ice"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 025, "name": "Pikachu", "type": "Electric", "weakness": "Ground"})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 061, "name": "Poliwhirl", "type": "Water", "weakness": ["Grass", "Electric"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 092, "name": "Gastly", "type": ["Ghost", "Poison"], 
+            "weakness": ["Ghost", "Dark", "Psychic", "Ground"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 095, "name": "Onix", "type": ["Rock", "Ground"], 
+            "weakness": ["Steel", "Fighting", "Water", "Ice", "Grass", "Ground"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 125, "name": "Electabuzz", "type": "Electric", "weakness": "Ground"})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 136, "name": "Flareon", "type": "Fire", 
+            "weakness": ["Water", "Ground", "Rock"]})
+    
+mongodb>    db.Pokemon.insertOne({"cod_pok": 144, "name": "Articuno", "type": ["Ice", "Flying"], 
+            "weakness": ["Steel", "Fire", "Electabuzz", "Rock"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 149, "name": "Dragonite", "category": "Dragon", "ability": "Inner Focus"})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 151, "name": "Mew", "category": "New Species", "ability": "Synchronize"})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 179, "name": "Mareep", "category": "Wool", "ability": "Static"})
+
+mongodb>    db.Pokemon.insert({"cod_pok": 190, "name": "Aipom", "category": "Long Tail", 
+            "ability": ["Run Away", "Pickup"]})
+
+mongodb>    db.Pokemon.insertOne({"cod_pok": 198, "name": "Murkrow", "category": "Darkness", 
+            "ability": ["Insomnia", "Super Luck"]})

@@ -21,6 +21,9 @@ mongodb> show databases
 {Switch or create a new database}
 mongodb> use <database_name>
 
+{Delete a database - You must use query "use <database_name>" before}
+mongodb> db.dropDatabase()
+
 {Create a collection}
 mongodb> db.createCollection('<collection_name>')
 
@@ -38,5 +41,26 @@ mongodb> db.<collection_name>.find({})
 mongodb> db.<collection_name>.deleteOne({<key>: '<value>'})
 mongodb> db.<collection_name>.deleteMany({<key>: '<value>', <key>: '<value>'})
 
+{Delete collections}
+mongodb> db.<collection>.drop()
+
+{Create collection witout _id field}
+mongodb> db.createCollection("<collection_name>", {autoIndexId: false})
+
+{Working with operators}
+mongodb> db.<collection>.find({"<field>": {<operators>: <value>}})
+
+{Working with AND operator}
+db.<collection>.find({$and: [{"<field>": {$eq: "<value>"}}, {"<field>": {$eq: "<value>"}}]})
+
+{Working with OR operator}
+db.<collection>.find({$or: [{"<field>": {$eq: "<value>"}}, {"<field>": {$eq: "<value>"}}]})
+
+OPERATORS:
+$eq: Values EQUALS than <value>
+$gt: Values GREATER than <value>
+$gte: Values GREATER or EQUAL than <value>
+$and: Logical Operator AND
+$or: Logical Operator OR
 
 
