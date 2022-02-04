@@ -1,4 +1,3 @@
-class Teste:
-    def __init__(self):
-        print("Olá, você conseguiu chamar a classe!")
-        
+list_dicio = [{"nome": "Pedro", "age": 21}, {"nome": "Ricardo", "age": 44}]
+
+print(len(list_dicio))

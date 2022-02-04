@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            // JavaScript Class
+            class Animal{
+                // JavaScript Constructor
+                constructor(name){
+                    this.name = name;
+                }
+
+                // JavaScript Method
+                printName(){
+                    return this.name;
+                }
+            }
+
+            // Dog class inheriting from the Animal class 
+            class Dog extends Animal{
+                constructor(name){
+                    super(name)
+                }
+            }
+
+            dog = new Dog("Maltes");
+
+            alert(dog.printName());
+        </script>
+    </body>
+</html>

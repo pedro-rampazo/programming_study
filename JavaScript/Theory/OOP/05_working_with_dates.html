@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            //var date = new Date();
+            
+            //Month Day
+            //alert(date.getDate());
+
+            //Week Day
+            //alert(date.getDay());
+
+            //Year
+            //alert(date.getFullYear());
+
+            //Minutes
+            //alert(date.getMinutes());
+
+            //Date → mmm/ddd/aaa
+            var date = new Date("02/04/2022");
+            var date_two = new Date("02/010/2022");
+
+            var days = (date_two.getTime() - date.getTime()) / (1000 * 3600 * 24);
+            alert(days);
+
+        </script>
+    </body>
+</html>
