@@ -2,8 +2,11 @@ import random
 
 class GameRules:
 
-    def shuffle(self, *cards_list):
-        cards_list = list(cards_list)
+    def __init__(self):
+        pass
+
+    def shuffle(cards_list):
+        print(cards_list)
         player_one = []
         player_two = []
         new_game = []
@@ -22,5 +25,10 @@ class GameRules:
         return new_game
 
 
-    def TopTrumps(self):
+    def topTrumps(self):
         pass
+
+
+    def winnerLooser(self, winner, looser):
+        print(f"WINNER: {winner}")
+        
