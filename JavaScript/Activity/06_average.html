@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            var options = 1;
+
+            while(options == 1){
+                var grade_one = -1;
+                var grade_two = -1;
+
+                while(grade_one < 0 || grade_one > 10){
+                    grade_one = parseFloat(prompt("Grade 1: "));
+                }
+                while(grade_two < 0 || grade_two > 10){
+                    grade_two = parseFloat(prompt("Grade 2: "));
+                }
+
+                var average = (grade_one + grade_two) / 2;
+
+                alert("Average: "+average.toFixed(2));
+                options = prompt("Type 1 to continue: ");
+            }
+
+        </script>
+    </body>
+</html>
