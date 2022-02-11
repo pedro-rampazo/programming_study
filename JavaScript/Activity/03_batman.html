@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            const villain_array = ["Joker", "Penguim", "Riddler", "Iceman", "Catwoman"];
+            var times = prompt("Times: ");
+
+            for(var i = 0; i < times; i++){
+                var villain_name = prompt("Insert Villain Name: ");
+                if(villain_array.includes(villain_name)){
+                    alert("Captured!");
+                }else{
+                    alert("Not captured!");
+                }
+            }
+        </script>
+    </body>
+</html>

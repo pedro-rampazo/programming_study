@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            var age_in_days = prompt("Insert your age in days: ");
+            var year = 0;
+            var month = 0;
+            var day = 0;
+
+            while(age_in_days > 0){
+                
+                if(age_in_days >= 365){
+                    year += 1;
+                    age_in_days -= 365;
+                }else if(age_in_days >= 30 && age_in_days < 365){
+                    month += 1;
+                    age_in_days -= 30;
+                }else{
+                    day = age_in_days;
+                    age_in_days = 0;
+                }
+            }
+
+            alert("You have "+ year +" Year(s), "+ month +" Month(s), "+ day +" Day(s)");
+
+        </script>
+    </body>
+</html>

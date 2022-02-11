@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>           
+            function periodTime(miliseconds){
+            var day = 0;
+            var hour = 0;
+            var minutes = 0;
+            var seconds = 0;
+            while(miliseconds > 0){
+                if(miliseconds >= 1000 * 60 * 60 * 24){
+                    day += 1;
+                    miliseconds -= 1000 * 60 * 60 * 24;
+                }else if(miliseconds >= 1000 * 60 * 60){
+                    hour += 1;
+                    miliseconds -= 1000 * 60 * 60;
+                }else if(miliseconds >= 1000 * 60){
+                    minutes += 1;
+                    miliseconds -= 1000 * 60;
+                }else{
+                    seconds += 1;
+                    miliseconds -= 1000;
+                }
+            }
+            alert("Day(s): "+day+" | Hour(s): "+hour+" | Minute(s): "+minutes+" | Second(s): "+seconds);
+            }
+        
+            for(i = 0; i < 2; i++){
+                var event_day = prompt("Day: ");
+                var event_hour = prompt("Hour [hh:mm:ss]: ");
+                var complete_date = new Date("April "+event_day+", 2022 "+event_hour);
+                var complete_date = new Date(complete_date.getFullYear(), complete_date.getMonth(), complete_date.getDate(), complete_date.getHours(), complete_date.getMinutes(), complete_date.getSeconds());
+
+                if(i == 0){
+                    var duration = complete_date;
+                }else{
+                    duration = complete_date - duration;
+                }
+            }
+
+            periodTime(duration);
+        </script>
+    </body>
+</html>

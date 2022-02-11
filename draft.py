@@ -1,3 +1,3 @@
-list_dicio = [{"nome": "Pedro", "age": 21}, {"nome": "Ricardo", "age": 44}]
+nome = "PEDRO"
 
-print(len(list_dicio))
+print(nome.lower())
