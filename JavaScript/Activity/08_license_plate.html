@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            const check_plate = /^[A-Z]{3}[-]{1}[0-9]{4}$/;
+            var n = prompt("Times: ");
+
+            for(i = 0; i < n; i++){
+                var s = prompt("Plate (AAA-9999): ");
+                if(check_plate.test(s)){
+                    alert(forbiddenDay(s.slice(-1)));
+                }else{
+                    alert("FAILURE");
+                }
+            }
+
+            function forbiddenDay(last_number){
+                if(last_number == 1 || last_number == 2){
+                    return "MONDAY";
+                }else if(last_number == 3 || last_number == 4){
+                    return "TUESDAY";
+                }else if(last_number == 5 || last_number == 6){
+                    return "WEDNESDAY";
+                }else if(last_number == 7 || last_number == 8){
+                    return "THURSDAY";
+                }else{
+                    return "FRIDAY";
+                }
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            alert("Kage Bunshin no Jutsu!!!");
+            var technique = 0;
+            var n = 0;
+
+            while(n < 1 || n > 10**6){
+                n = prompt("How many ninjas? ");
+            }
+
+            while(n % 2 == 0){
+                n /= 2;
+                technique += 1;
+            }
+
+            if(n == 1){
+                alert("The technique was used in "+technique+" time(s)");
+            }else{
+                alert("The number of ninjas is impossible!!!");
+            }
+        </script>
+    </body>
+</html>
