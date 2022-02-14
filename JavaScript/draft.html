@@ -1,7 +1,15 @@
 <html>
     <body>
         <script>
+            const list = [2, 2];
             
+            if(Math.max.apply(null, list) == list[0] && list[0] != list[1]){
+                alert("Index 0 is the biggest");
+            }else if(Math.max.apply(null, list) == list[1] && list[0] != list[1]){
+                alert("Index 1 is the biggest");
+            }else{
+                alert("A Tie!");
+            }
         </script>
     </body>
 </html>
