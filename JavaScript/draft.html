@@ -1,15 +1,15 @@
 <html>
     <body>
+        <dir class="box"></dir>
+        <dir class="box"></dir>
+        <dir class="box"></dir>
         <script>
-            const list = [2, 2];
+            const el = document.querySelectorAll('.box');
+            let element = el[0];
             
-            if(Math.max.apply(null, list) == list[0] && list[0] != list[1]){
-                alert("Index 0 is the biggest");
-            }else if(Math.max.apply(null, list) == list[1] && list[0] != list[1]){
-                alert("Index 1 is the biggest");
-            }else{
-                alert("A Tie!");
-            }
+            element.style.width = 100;
+            element.style.height = 100;
+            element.style.backgroundColor = "blue";   
         </script>
     </body>
 </html>
