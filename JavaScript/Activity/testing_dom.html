@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <style>
+            .square{
+                width: 500px;
+                height: 500px;
+                background-color: darkseagreen;
+            }
+
+            .movementAnim{
+                transition: 2s;
+                margin-left: 300px;
+                background-color: black;
+            }
+
+        </style>
+
+        <div class="square"></div>
+        
+        <script>
+            const square = document.querySelectorAll('.square')[0];
+
+            square.addEventListener('click', ()=> {
+                if(square.classList.contains('movementAnim')){
+                    square.classList.remove('movementAnim');
+                }else{
+                    square.classList.add('movementAnim');
+                }
+            })
+
+        </script>
+    </body>
+</html>
