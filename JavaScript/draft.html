@@ -1,15 +1,24 @@
 <html>
     <body>
-        <dir class="box"></dir>
-        <dir class="box"></dir>
-        <dir class="box"></dir>
-        <script>
-            const el = document.querySelectorAll('.box');
-            let element = el[0];
+        
+        <style>
             
-            element.style.width = 100;
-            element.style.height = 100;
-            element.style.backgroundColor = "blue";   
+            .change_color{
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+            }
+
+        </style>
+
+        <form>
+            <button class="change_color"></button>    
+        </form>
+
+        <script>
+            const vari = document.querySelectorAll('button.change_color');
+            console.log(vari);
         </script>
+
     </body>
 </html>
