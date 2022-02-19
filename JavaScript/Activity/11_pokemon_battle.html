@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+            let times = prompt("Battles: ");
+            let bonus = parseInt(prompt("Bonus: "));
+
+            for(i = 0; i < times; i++){
+                let blow_list = [];
+
+                for(p = 0; p < 2; p++){
+                    let blow = 0;
+                    let attack = parseInt(prompt("Pokemon Attack: "));
+                    let defense = parseInt(prompt("Pokemon Defense: "));
+                    let trainer_level = parseInt(prompt("Trainer Level: "));
+
+                    if(trainer_level % 2 == 0){
+                        blow = ((attack + defense) / 2) + bonus;
+                    }else{
+                        blow = (attack + defense) / 2;
+                    }
+
+                    blow_list.push(parseInt(blow));
+                    alert(blow_list);
+
+                }
+
+                if(blow_list[0] != blow_list[1]){      
+                    if(Math.max.apply(null, blow_list) == blow_list[0]){
+                        alert("Guarte");
+                    }else{
+                        alert("Dabriel");
+                    }
+                }else{
+                    alert("A Tie!");
+                }
+            }
+        </script>
+    </body>
+</html>

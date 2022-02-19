@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <script>
+            // getElementsByClassName() changes an element that has indicated ID. it can be used more than one time.
+            const element = document.getElementsByClassName('box');
+
+            for(let i = 0; i < element.length; i++){
+                let el = element[i];
+
+                el.style.width = 100;
+                el.style.height = 100;
+                el.style.background = "green";
+                el.style.marginTop = 10;
+                el.style.marginLeft = 200;
+            }
+            
+        </script>
+    </body>
+</html>

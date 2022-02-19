@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <div class="tests">
+            <dir class="inside-tests">Text</dir>
+        </div>
+        
+        <script>
+            // querySelectorAll() can select all classes. You decide even wich part to change.
+            const el = document.querySelectorAll('.tests .inside-tests');
+            el[0].style.color = 'blue';
+        </script>
+    </body>
+</html>

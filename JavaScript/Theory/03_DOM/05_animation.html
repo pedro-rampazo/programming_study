@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: blueviolet;
+                margin-left: 0px;
+            }
+            .animLeft{
+                transition: 1s;
+                margin-left: 100px;
+                background-color: chartreuse;
+            }
+        </style>
+        
+        <div class="box"></div>
+        
+        <script>
+            var box = document.querySelectorAll('.box')[0];
+            
+            // animation after 1 second
+            setTimeout(()=> {
+                box.classList.add('animLeft');
+            }, 1000);
+
+            // animation on click
+            box.addEventListener('click',()=>{
+                box.classList.add('animLeft');
+            })
+        </script>
+    </body>
+</html>
