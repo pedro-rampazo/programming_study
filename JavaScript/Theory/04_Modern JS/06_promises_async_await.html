@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <script>
+            // Promise
+            
+            function tests(){
+                return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        const error = false;
+                        if(error){
+                            reject('Error...');
+                        }else{
+                            resolve('The promise was successfully resolved.');
+                        }
+                    }, 2000)
+
+
+                })
+            }
+
+            // Async function
+
+            async function tests2(){
+                await tests().then(function(res){ // Async function is only executed when await is satisfied.
+                    alert(res);
+                });
+                alert('Hello!');
+            }
+
+            tests2();
+        </script>
+    </body>
+</html>
