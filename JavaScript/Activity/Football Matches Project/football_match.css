@@ -1,41 +1,14 @@
 body{
     background-color: darkslategrey;
-}
-
-.title, .subtitle{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: bisque;
-    text-align: center;
 }
 
-.home_team, .away_team, .against{
-    margin: 30px;
-    width: 300px;
-    height: 450px;
+.team_name{
+    font-size: 12px;
 }
 
-.home_team{
-    float: left;
-}
-
-.away_team{
-    float: right;
-}
-
-.against{
-    font-size: 200px;
-    color: bisque;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-
-.container{
-    text-align: center;
-}
-
-.goals{
-    margin-top: 15px;
-    width: 100px;
+.goal input{
     height: 50px;
-    font-size: 24px;
+    font-size: 16px;
 }
