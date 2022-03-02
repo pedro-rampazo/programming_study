@@ -24,6 +24,10 @@ Creating venv
 
     $ deactivate
 
+- Remove venv
+
+    $ sudo rm -rf <name_venv>
+
 -----------------------------------------------------------------------------------------
 VIRTUALENV
 

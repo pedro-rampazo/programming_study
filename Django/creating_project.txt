@@ -1,0 +1,41 @@
+VENV
+
+- Creating VENV:
+
+    $ python -m venv <name_venv>
+
+- Activate VENV:
+
+    $ source <name_venv>/bin/activate
+
+- Deactivate VENV:
+
+    $ deactivate
+
+- Remove VENV:
+
+    $ sudo rm -rf <name_venv>
+
+-----------------------------------------------------------
+Django Installation (on VENV)
+
+    $ python -m pip install Django
+
+- Django version:
+
+    $ python -m django --version
+
+-----------------------------------------------------------
+Django Project
+
+    $ django-admin startproject <project_name>
+
+- Activate the development server:
+
+    $ python manage.py runserver
+
+- Access http://127.0.0.1:8000/;
+
+- Creating an app:
+
+    $ python manage.py startapp <app_name>
