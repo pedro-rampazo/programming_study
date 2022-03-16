@@ -1,0 +1,63 @@
+DJANGO
+
+[VENV]
+
+$ python -m venv <venv_name>
+$ source <venv_name>/bin/activate
+$ deactivate
+
+[Install Django in VENV]
+
+$ pip install Django
+
+[Start a New Project]
+
+$ django-admin startproject <project_name>
+$ python manage.py runserver
+
+[Install Basic Migrations for Django Project]
+
+$ python manage.py migrate
+
+[Create a New App]
+
+$ python manage.py startapp <app_name>
+
+[Create a Model]
+
+[Add Model on settings.py]
+
+[Make Migrations]
+
+$ python manage.py makemigrations <app_name>
+
+[View New Model Created]
+
+$ python manage.py sqlmigrate <app_name> 0001
+
+[Migrate Model]
+
+$ python manage.py migrate <app_name>
+
+[View Django Admin]
+
+$ python manage.py createsuperuser
+$ python manage.py runserver
+
+[Create viewing of the your app in Django Admin on admin.py]
+
+[Access SQLite API]
+
+$ python manage.py shell
+
+>>> var = APP.objects.all()
+>>> var
+
+>>> var_2 = APP.objects.get(id=1)
+>>> var_2
+
+>>> var_2.property
+>>> var_2.property = "My Example"
+>>> var_2.save()
+
+>>> APP.objects.filter(property=value)
