@@ -1,0 +1,42 @@
+CREATING APIs
+
+1. install pandas:
+
+    $ sudo apt install python3-pandas
+
+2. install flask:
+
+    $ pip install Flask:
+
+3. choose a database, in this example we use a .csv file
+
+4. import pandas:
+
+    ~ import pandas
+
+5. import flask:
+
+    ~ from flask import Flask
+
+6. typing base code flask:
+
+    ~ app = Flask(__name__)
+    ~
+    ~ @app.route('/')
+    ~ def example():
+    ~   return 'Hello World!'
+    ~
+    ~ app.run()
+
+7. On terminal, use flask command:
+
+    $ flask
+
+8. start the development server:
+
+    $ export FLASK_APP=file_name
+    
+    $ flask run
+    or
+    $ flask run --host=0.0.0.0
+
