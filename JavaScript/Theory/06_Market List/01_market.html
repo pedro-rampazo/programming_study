@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            header{
+                background-color: blueviolet;
+                text-align: center;
+                color: antiquewhite;
+                padding: 20px 0;
+            }
+
+            .register_list{
+                display: flex;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+
+            .register_list input[type=text]{
+                flex: 1;
+                height: 40px;
+                padding-left: 20px;
+            }
+
+            .single_product_list{
+                padding: 10px 0;
+                margin: 20px 0;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+            }
+
+            .single_product_list h3{
+                flex: 1;
+                padding: 20px;
+            }
+
+            h3.price{
+                text-align: right;
+                font-size: 17px;
+            }
+
+            h3.price > span{
+                background-color: blueviolet;
+                padding: 8px 10px;
+                border-radius: 20px;
+                color: antiquewhite;
+            }
+
+            .product_sum{
+                margin: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>SuperMarket List</h2>
+        </header>
+        
+        <div class="register_list">
+            <input type="text" placeholder="Product name" name="product_name" />
+            <input type="number" placeholder="Product price" name="product_price" />
+            <input type="submit" name="action" value="Register" />
+        </div>
+
+        <div class="product_list"></div>
+
+        <div class="product_sum">
+            <h1>Total: R$0,00</h1>
+        </div>
+
+        <button name="clear">Clear</button>
+
+        <script src="01_market.js"></script>
+    </body>
+</html>

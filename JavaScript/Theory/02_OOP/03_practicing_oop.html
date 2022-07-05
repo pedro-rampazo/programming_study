@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function Person(){
+                this.name = "Pedro";
+                this.age = 22;
+                this.printName = function(){
+                    alert(this.name);
+                }
+                this.returnAnimal = function(animal){
+                    return animal;
+                }
+            }
+
+            function Animal(){
+                this.name = "Cachorro";
+                this.breed = "Bulldog";
+            }
+
+            var animal = new Animal();
+            var person = new Person();
+            alert(person.returnAnimal(animal).breed);
+
+        </script>
+    </body>
+</html>

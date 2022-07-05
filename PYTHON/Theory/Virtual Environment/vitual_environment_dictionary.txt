@@ -1,0 +1,52 @@
+VENV
+
+Creating venv
+
+- Access the folder to install venv by terminal;
+
+- Type:
+
+    $ python -m venv <name_venv>
+
+- For list all packages installed in current python version, type:
+
+    $ pip list
+
+- For create a .txt file that have all packages in current python version, type:
+
+    $ pip freeze > requirements.txt
+
+- Activate my venv
+
+    $ source <name_venv>/bin/activate
+
+- Deactivate my env
+
+    $ deactivate
+
+- Remove venv
+
+    $ sudo rm -rf <name_venv>
+
+-----------------------------------------------------------------------------------------
+VIRTUALENV
+
+- Install virtualenv:
+
+    $ pip install virtualenv
+
+- Install python3-virtualenv:
+
+    $ sudo apt install python3-virtualenv
+
+- Creating virtualenv:
+
+    $ virtualenv <virtualenv_name>
+
+- Activate virtualenv
+
+    $ source <virtualenv_name>/bin/activate
+
+- Deactivate virtualenv
+
+    $ deactivate

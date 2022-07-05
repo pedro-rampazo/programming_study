@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            let plate = 0;
+            let turn = 0;
+            const ten_per_cent = parseFloat(0.1.toPrecision(1));
+            const ninety_per_cent = parseFloat(0.9.toPrecision(1));
+
+            while(plate <= 1 || plate >= 10 ** 4){
+                plate = prompt("Circuit Plates: ");
+            }
+
+            while(turn <= 1 || turn >= 10 ** 4){
+                turn = prompt("Circuit Turns: ");
+            }
+
+            let total_plate = plate * turn;
+
+            for(let i = ten_per_cent; i <= ninety_per_cent; i += ten_per_cent){
+                let result = Math.ceil(total_plate * i.toPrecision(1));
+                console.log(result);
+            }    
+        </script>
+    </body>
+</html>

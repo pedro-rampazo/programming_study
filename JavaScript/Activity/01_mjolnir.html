@@ -1,0 +1,21 @@
+
+<html>
+    <body>
+        <script>
+            while(true){
+                alert("Mjölnir at rest!!!");
+                var hero = prompt("Who will try to be worthy??");
+                var force = prompt("Applied Force[N]: ");
+                
+                if(force > 0 && force < 25000){
+                    alert(hero + " is not worthy");
+                }else if(force >= 25000){
+                    alert(hero + " is worthy");
+                    break
+                }else{
+                    alert("Incorrect Value");
+                }
+            }
+        </script>
+    </body>
+</html>

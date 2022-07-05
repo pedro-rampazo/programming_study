@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var quantity = prompt("Insert quantity: ");
+            var out = 0;
+            var inside = 0;
+
+            for(var i = 0; i < quantity; i++){
+                var number = prompt("Insert a number: ");
+
+                if(number < 10 || number > 20){
+                    out += 1;
+                }else{
+                    inside += 1; 
+                }
+            }
+
+            alert("OUT values: " + out);
+            alert("IN values: " + inside);
+        </script>
+    </body>
+</html>
