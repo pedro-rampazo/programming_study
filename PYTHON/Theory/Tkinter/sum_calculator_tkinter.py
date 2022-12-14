@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 
+
 def sum_calculator(*args):
     try:
         val1 = value1.get()
@@ -8,6 +9,7 @@ def sum_calculator(*args):
         sum_value.set(val1 + val2)
     except ValueError:
         pass
+
 
 root = Tk()
 root.title("Sum Calculator")
